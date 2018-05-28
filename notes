@@ -1,0 +1,14 @@
+
+
+research (i.e. places to steal stuff from)
+	https://en.wikipedia.org/wiki/Speculative_Store_Bypass
+	https://bugs.chromium.org/p/project-zero/issues/detail?id=1272
+	https://www.redhat.com/en/blog/speculative-store-bypass-explained-what-it-how-it-works
+	https://www.theregister.co.uk/2018/05/21/spectre_meltdown_v4_microsoft_google/
+	https://www.redhat.com/en/blog/what-are-meltdown-and-spectre-heres-what-you-need-know
+
+	Google patched early:
+		https://plus.google.com/u/0/+jwildeboer/posts/MN6ahQKtQ1k
+	Semi-true timeline:
+		https://plus.google.com/u/0/+jwildeboer/posts/jj6a9JUaovP
+
