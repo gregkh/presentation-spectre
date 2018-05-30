@@ -12,3 +12,11 @@ research (i.e. places to steal stuff from)
 	Semi-true timeline:
 		https://plus.google.com/u/0/+jwildeboer/posts/jj6a9JUaovP
 
+	Backports aren't fully safe for Meltdown:
+		https://news.ycombinator.com/item?id=16087736
+
+	lwn stuff on variants 3a and 4:
+		https://lwn.net/Articles/755114/
+	Intel's post on it:
+		https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00115.html
+
