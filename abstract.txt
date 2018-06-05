@@ -1,0 +1,7 @@
+Spectre, Meltdown, & Linux
+
+This talk will give a brief overview of the recently announced Meltdown
+and Spectre security problems that were announced early in 2018.  It
+will cover how the Linux kernel security community addressed these
+problems, and how all Linux users can be sure they are protected from
+problems like these with the latest security fixes.
