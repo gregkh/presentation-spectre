@@ -2,10 +2,15 @@
 
 research (i.e. places to steal stuff from)
 	https://en.wikipedia.org/wiki/Speculative_Store_Bypass
+
 	https://bugs.chromium.org/p/project-zero/issues/detail?id=1272
 	https://www.redhat.com/en/blog/speculative-store-bypass-explained-what-it-how-it-works
 	https://www.theregister.co.uk/2018/05/21/spectre_meltdown_v4_microsoft_google/
 	https://www.redhat.com/en/blog/what-are-meltdown-and-spectre-heres-what-you-need-know
+
+	https://meltdownattack.com/
+Spectre paper:
+	https://spectreattack.com/spectre.pdf
 
 	Google patched early:
 		https://plus.google.com/u/0/+jwildeboer/posts/MN6ahQKtQ1k
@@ -20,3 +25,8 @@ research (i.e. places to steal stuff from)
 	Intel's post on it:
 		https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00115.html
 
+	Microsoft's post on it:
+		https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/
+
+	kernel documentation:
+		documentation/speculation.txt
