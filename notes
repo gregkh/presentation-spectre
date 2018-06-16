@@ -1,4 +1,51 @@
 
+Variant 1
+	bounds check bypass
+
+Variant 2
+	branch target injection
+
+Variant 3
+	rouge data cache load
+	(meltdown)
+
+Variant 3a
+	Rouge system register read
+
+Variant 4
+	Speculative store bypass
+
+Variant 5
+	Lazy FP state restore
+
+
+v1 - kernel fix
+	x86 4.14.14 4.9.77 4.4.113
+	arm 4.15.4 4.14.21
+and ongoing...
+	big update in:
+		x86 4.9.102 4.14.43 4.16.11 4.17
+		arm 4.9.95 4.16
+
+
+v2 - microcode fix
+
+v3 - kernel fix
+	x86 4.14.11 4.9.75 4.4.110
+	arm 4.15.4 4.14.20
+
+v3a - kernel/microcode fix
+	x86 - 4.9.104 4.14.45 4.16.13 4.17
+
+v4 - microcode fix
+
+v5 - kernel fix
+	x86 4.4.138 4.6
+
+
+
+
+
 
 research (i.e. places to steal stuff from)
 	https://en.wikipedia.org/wiki/Speculative_Store_Bypass
