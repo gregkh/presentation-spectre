@@ -28,16 +28,19 @@ and ongoing...
 		arm 4.9.95 4.16
 
 
-v2 - microcode fix
+v2 - microcode fix and kernel fix
+	x86 4.4.121 4.9.87 4.14.26 4.15.9 4.16
 
 v3 - kernel fix
 	x86 4.14.11 4.9.75 4.4.110
 	arm 4.15.4 4.14.20
 
 v3a - kernel/microcode fix
-	x86 - 4.9.104 4.14.45 4.16.13 4.17
+	PTI + microcode fixes
 
 v4 - microcode fix
+	x86 - 4.9.102 4.14.43 4.16.11 4.17
+
 
 v5 - kernel fix
 	x86 4.4.138 4.6
@@ -77,3 +80,15 @@ Spectre paper:
 
 	kernel documentation:
 		documentation/speculation.txt
+
+	retpoline, fixes for variant 2
+		https://security.googleblog.com/2018/01/more-details-about-mitigations-for-cpu_4.html
+
+
+	3a and 4 announcement:
+		https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00115.html
+		https://bugs.chromium.org/p/project-zero/issues/detail?id=1528
+	3a and 4 stuff from Intel:
+		https://software.intel.com/sites/default/files/managed/b9/f9/336983-Intel-Analysis-of-Speculative-Execution-Side-Channels-White-Paper.pdf
+		https://software.intel.com/sites/default/files/managed/c5/63/336996-Speculative-Execution-Side-Channel-Mitigations.pdf
+
