@@ -1,0 +1,79 @@
+
+This talk is a very simple summary of some of the Spectre issues.
+
+To get a real understanding of the problem, and the potential solutions,
+please see the below resources.  They explain it all much better than I
+could do.
+
+The first post, read this before anything else.  This is the Google
+Project Zero post describing the original Spectre issues as found by
+Jann Horn:
+
+
+Then look at the other papers and documentation from the original web
+pages created for these problems, because every cool new problem
+deserves a web page and a logo.  Seriously, they do.
+
+	https://spectreattack.com/
+	https://spectreattack.com/spectre.pdf
+
+The Wikipedia entry goes into some prior history that led people to
+discover this work, and is worth watching as it is trying to keep of the
+new variants that keep getting announced:
+
+	https://en.wikipedia.org/wiki/Speculative_Store_Bypass
+
+Red Hat made a cute video that tries to explain how this all works for
+those of us who do not understand how a CPU really works inside (i.e.
+all of us):
+	https://www.redhat.com/en/blog/speculative-store-bypass-explained-what-it-how-it-works
+
+XXX from Google came up with the idea of a "retpoline" to try to
+mitigate the problems found for variant 2, without taking as severe of a
+performance hit as everyone originally thought was going to happen.
+It's a great read as well:
+	https://security.googleblog.com/2018/01/more-details-about-mitigations-for-cpu_4.html
+
+Intel published two good papers describing these classes of problems and
+goes into some potential solutions for the issues.  These are easy
+reading and not very technical, so worth sending to managers if they
+have questions about these issues:
+	https://software.intel.com/sites/default/files/managed/b9/f9/336983-Intel-Analysis-of-Speculative-Execution-Side-Channels-White-Paper.pdf
+	https://software.intel.com/sites/default/files/managed/c5/63/336996-Speculative-Execution-Side-Channel-Mitigations.pdf
+
+The Spectre variant 4 was found again by Jann, and described very well
+in this bug report, which was pretty much the only announcement for it:
+	https://bugs.chromium.org/p/project-zero/issues/detail?id=1528
+(For an interesting note, look at comment 4 in the bug entry.)
+
+The Linux kernel documentation about this problem, and how to modify
+your kernel code to avoid it:
+	Documentation/speculation.txt
+
+
+Miscellaneous items worth mentioning for the whole train-wreck that was
+the original Spectre/Meltdown announcement that make for fun reading:
+
+	Google patched early:
+		https://plus.google.com/u/0/+jwildeboer/posts/MN6ahQKtQ1k
+	Semi-true timeline put together:
+		https://plus.google.com/u/0/+jwildeboer/posts/jj6a9JUaovP
+	Backports aren't fully safe for Meltdown, use a 4.14.y kernel!:
+		https://news.ycombinator.com/item?id=16087736
+
+
+
+
+	https://bugs.chromium.org/p/project-zero/issues/detail?id=1272
+	https://www.theregister.co.uk/2018/05/21/spectre_meltdown_v4_microsoft_google/
+	https://www.redhat.com/en/blog/what-are-meltdown-and-spectre-heres-what-you-need-know
+
+	lwn stuff on variants 3a and 4:
+		https://lwn.net/Articles/755114/
+	Intel's post on it:
+		https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00115.html
+
+	Microsoft's post on it:
+		https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/
+
+
