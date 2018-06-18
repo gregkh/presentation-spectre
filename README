@@ -1,6 +1,9 @@
 This is a repo containing a presentation about Linux and the recent
 spate of Spectre issues.  Originally given at LinuxCon Japan and China
-2018.
+in June 2018.
+
+Please see the file, additional_resources.txt for lots of good backup
+material to learn all about these issues.
 
 The presentation is licensed under the Creative Commons
 "Attribution-Noncommercial-ShareAlike" license, version 4.0, that can be
