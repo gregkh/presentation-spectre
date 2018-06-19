@@ -1,13 +1,19 @@
 
-This talk is a very simple summary of some of the Spectre issues.
-
-To get a real understanding of the problem, and the potential solutions,
+This talk is a very simple summary of some of the Spectre issues.  To
+get a real understanding of the problem, and the potential solutions,
 please see the below resources.  They explain it all much better than I
 could do.
 
 The first post, read this before anything else.  This is the Google
 Project Zero post describing the original Spectre issues as found by
 Jann Horn:
+
+	https://googleprojectzero.blogspot.com/2018/01/reading-privileged-memory-with-side.html
+
+and the bug entry for this, with the sample code for how to prove it is
+a problem:
+
+	https://bugs.chromium.org/p/project-zero/issues/detail?id=1272
 
 
 Then look at the other papers and documentation from the original web
@@ -23,16 +29,25 @@ new variants that keep getting announced:
 
 	https://en.wikipedia.org/wiki/Speculative_Store_Bypass
 
+
 Red Hat made a cute video that tries to explain how this all works for
 those of us who do not understand how a CPU really works inside (i.e.
 all of us):
+
+	https://www.redhat.com/en/blog/what-are-meltdown-and-spectre-heres-what-you-need-know
+
+And then did it again when variants 3a and 4 were announced:
+
 	https://www.redhat.com/en/blog/speculative-store-bypass-explained-what-it-how-it-works
 
-XXX from Google came up with the idea of a "retpoline" to try to
+
+Matt Linton from Google came up with the idea of a "retpoline" to try to
 mitigate the problems found for variant 2, without taking as severe of a
 performance hit as everyone originally thought was going to happen.
 It's a great read as well:
+
 	https://security.googleblog.com/2018/01/more-details-about-mitigations-for-cpu_4.html
+
 
 Intel published two good papers describing these classes of problems and
 goes into some potential solutions for the issues.  These are easy
@@ -41,39 +56,90 @@ have questions about these issues:
 	https://software.intel.com/sites/default/files/managed/b9/f9/336983-Intel-Analysis-of-Speculative-Execution-Side-Channels-White-Paper.pdf
 	https://software.intel.com/sites/default/files/managed/c5/63/336996-Speculative-Execution-Side-Channel-Mitigations.pdf
 
+
 The Spectre variant 4 was found again by Jann, and described very well
 in this bug report, which was pretty much the only announcement for it:
-	https://bugs.chromium.org/p/project-zero/issues/detail?id=1528
-(For an interesting note, look at comment 4 in the bug entry.)
 
-The Linux kernel documentation about this problem, and how to modify
-your kernel code to avoid it:
+	https://bugs.chromium.org/p/project-zero/issues/detail?id=1528
+
+For an interesting note, look at comment 3 in the bug entry.
+
+
+For variants 3a and 4, there was not much press, but here is Intel's
+post about it:
+
+	https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00115.html
+
+And Microsoft's post on it:
+	https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/
+
+
+Until more information about variant 5 comes out, this Register article
+seems to contain most of the public information at this point in time:
+
+	https://www.theregister.co.uk/2018/06/13/intel_lazy_fpu_state_security_flaw/
+
+and a semi-redacted post describing some technical details is here:
+
+	https://blog.cyberus-technology.de/posts/2018-06-06-intel-lazyfp-vulnerability.html
+
+
+The Linux kernel has documentation about this problem, and how to modify
+your kernel code to avoid it in the following kernel file:
+
 	Documentation/speculation.txt
+
+and how to control if you want the kernel to try to mitigate this
+problem:
+	https://www.kernel.org/doc/html/latest/userspace-api/spec_ctrl.html
+
+
+lwn.net's coverage of all of this has been wonderful from the very
+beginning.  It was their questioning of the very large sets of patches
+getting easily merged into the kernel when it came to page table
+isolation that led other journalists to wonder what was going on in this
+area, which kept the pressure on the chip companies to get the work done
+and to finally announce the problems.
+
+These are just some of the great articles you should read from them
+about this topic:
+
+	Addressing Meltdown and Spectre in the kernel:
+		https://lwn.net/Articles/743265/
+
+	Meltdown/Spectre mitigation for 4.15 and beyond:
+		https://lwn.net/Articles/744287/
+
+	A look at the handling of Meltdown and Spectre
+		https://lwn.net/Articles/743363/
+
+	The effect of Meltdown and Spectre in our communities
+		https://lwn.net/Articles/745674/
+
+
+I wrote two blog posts about this as well, while in the midst of trying
+to get the fixes out to the stable kernels for people to be able to
+protect themselves:
+	http://kroah.com/log/blog/2018/01/06/meltdown-status/
+	http://kroah.com/log/blog/2018/01/19/meltdown-status-2/
 
 
 Miscellaneous items worth mentioning for the whole train-wreck that was
 the original Spectre/Meltdown announcement that make for fun reading:
 
+	Linus's comments on the spectre 2 patches, and how crummy they are:
+		https://lwn.net/Articles/745112/
+	and David Woodhouse's response to that post, explaining just how they
+	are needed in this manner:
+		https://lwn.net/Articles/745113/
+
 	Google patched early:
 		https://plus.google.com/u/0/+jwildeboer/posts/MN6ahQKtQ1k
-	Semi-true timeline put together:
+
+	Semi-true timeline attempted to be put together:
 		https://plus.google.com/u/0/+jwildeboer/posts/jj6a9JUaovP
-	Backports aren't fully safe for Meltdown, use a 4.14.y kernel!:
+
+	Backports aren't fully safe for Meltdown, use a 4.14.y kernel or
+	newer kernel!:
 		https://news.ycombinator.com/item?id=16087736
-
-
-
-
-	https://bugs.chromium.org/p/project-zero/issues/detail?id=1272
-	https://www.theregister.co.uk/2018/05/21/spectre_meltdown_v4_microsoft_google/
-	https://www.redhat.com/en/blog/what-are-meltdown-and-spectre-heres-what-you-need-know
-
-	lwn stuff on variants 3a and 4:
-		https://lwn.net/Articles/755114/
-	Intel's post on it:
-		https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00115.html
-
-	Microsoft's post on it:
-		https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/
-
 
