@@ -143,3 +143,18 @@ the original Spectre/Meltdown announcement that make for fun reading:
 	newer kernel!:
 		https://news.ycombinator.com/item?id=16087736
 
+
+--------------------
+
+v1.1 released July 10
+	research paper:
+		https://people.csail.mit.edu/vlk/spectre11.pdf
+	Intel's response:
+		https://01.org/security/advisories/intel-oss-10002
+	Red Hat's response:
+		https://access.redhat.com/solutions/3523601
+	No real kernel change, just more whack-a-mole based on static tools :(
+
+
+
+
