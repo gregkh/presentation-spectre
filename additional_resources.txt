@@ -156,5 +156,7 @@ v1.1 released July 10
 	No real kernel change, just more whack-a-mole based on static tools :(
 
 
-
+Does this all really work?  Lack of guarantees for v1 mitigations:
+	https://www.sigarch.org/speculating-about-speculation-on-the-lack-of-security-guarantees-of-spectre-v1-mitigations/
+	(personal note, glad to see people looking into this...)
 
