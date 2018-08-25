@@ -83,6 +83,9 @@ and a semi-redacted post describing some technical details is here:
 
 	https://blog.cyberus-technology.de/posts/2018-06-06-intel-lazyfp-vulnerability.html
 
+Andrea Arcangeli's great presentation on this topic:
+	http://people.redhat.com/~aarcange/slides/2018-nylug-speculation-out-of-control.pdf
+	and video: https://www.youtube.com/watch?v=fdzusBfR6GQ
 
 The Linux kernel has documentation about this problem, and how to modify
 your kernel code to avoid it in the following kernel file:
@@ -159,4 +162,12 @@ v1.1 released July 10
 Does this all really work?  Lack of guarantees for v1 mitigations:
 	https://www.sigarch.org/speculating-about-speculation-on-the-lack-of-security-guarantees-of-spectre-v1-mitigations/
 	(personal note, glad to see people looking into this...)
+
+--------------
+
+L1TF - L1 Terminal Fault.  Loads of new stuff on this issue.
+
+Full paper, links to articles and other stuff about this:
+	https://foreshadowattack.eu/
+
 
