@@ -1,0 +1,35 @@
+MDS (i.e. Zombieland/RIDL/Fallout) announced May 14
+	Intel worked with kernel community much better than before
+		Still much room for improvement
+		Debian was not brought in until days before release.
+	Major performance hit on all Intel systems
+	syscalls are now expensive
+	Update your BIOS!
+
+Community not liking performance decrease of MDS
+	Disabling hyperthreading is huge performance hit
+		openBSD was right, for the wrong reasons.
+	https://make-linux-fast-again.com/
+	Users now have to choose between security and performance
+	What decision did your cloud provider choose?
+
+Coordinated hardware security issues still underway, no end in sight.
+Always stay up to date on your kernel versions
+Formal process for how to handle coordination reviewed by legal council
+	Will be merged into kernel source soon
+
+
+
+links:
+	https://www.redhat.com/en/blog/understanding-mds-vulnerability-what-it-why-it-works-and-how-mitigate-it
+	mds reading list:	https://lwn.net/Articles/788522/
+	https://software.intel.com/security-software-guidance/insights/deep-dive-intel-analysis-microarchitectural-data-sampling
+	https://www.postgresql.org/message-id/flat/20190514223052.2iufhkjmgod2h7ic%40alap3.anarazel.de
+
+	https://cyberus-technology.de/posts/2019-05-14-zombieload.html
+	https://mdsattacks.com/
+	https://zombieloadattack.com/
+	https://cpu.fail/
+	https://www.redhat.com/en/blog/understanding-mds-vulnerability-what-it-why-it-works-and-how-mitigate-it
+	https://www.redhat.com/en/blog/deeper-look-mds-vulnerability
+
