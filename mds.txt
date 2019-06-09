@@ -32,4 +32,6 @@ links:
 	https://cpu.fail/
 	https://www.redhat.com/en/blog/understanding-mds-vulnerability-what-it-why-it-works-and-how-mitigate-it
 	https://www.redhat.com/en/blog/deeper-look-mds-vulnerability
+	https://sites.google.com/a/chromium.org/dev/chromium-os/mds-on-chromeos
+	https://make-linux-fast-again.com/
 
