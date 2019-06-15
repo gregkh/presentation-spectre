@@ -12,7 +12,9 @@ Kernel build (make -j16)  5.2-rc4 building 5.2-rc4
 	real    7m51.870s	471
 	real    7m54.255s	474
 
+	avg: 472.5
 
+(built on 5.1.x):
 	real    8m1.171s	481
 	real    8m5.072s	485
 	real    8m4.460s	484
@@ -38,6 +40,8 @@ Kernel build (make -j16)  5.2-rc4 building 5.2-rc4
 	real    8m1.118s	481
 	real    8m1.681s	481
 	real    8m2.210s	482
+
+	avg: 481
 
 stable kernel creation (create 5.1.10-rc2)
 	real    0m51.200s
