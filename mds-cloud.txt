@@ -1,0 +1,7 @@
+l1tf:Mitigation: PTE Inversion
+mds:Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown
+meltdown:Mitigation: PTI
+spec_store_bypass:Vulnerable
+spectre_v1:Mitigation: __user pointer sanitization
+spectre_v2:Mitigation: Full generic retpoline, STIBP: disabled, RSB filling
+

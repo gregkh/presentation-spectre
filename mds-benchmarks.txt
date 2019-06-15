@@ -10,7 +10,7 @@ spectre_v2:Mitigation: Full generic retpoline, IBPB: conditional, IBRS_FW, STIBP
 
 Kernel build (make -j16)  5.2-rc4 building 5.2-rc4
 	real    7m51.870s	471
-	real    7m54.255s
+	real    7m54.255s	474
 
 
 	real    8m1.171s	481
@@ -23,4 +23,52 @@ stable kernel creation (create 5.1.10-rc2)
 	real    0m50.946s
 
 
+Round 2:
+/sys/devices/system/cpu/vulnerabilities $ grep . *
+l1tf:Not affected
+mds:Mitigation: Clear CPU buffers; SMT vulnerable
+meltdown:Not affected
+spec_store_bypass:Mitigation: Speculative Store Bypass disabled via prctl and s
+ccomp
+spectre_v1:Mitigation: __user pointer sanitization
+spectre_v2:Mitigation: Full generic retpoline, IBPB: conditional, IBRS_FW, STIB
+: conditional, RSB filling
+
+Kernel build (make -j16)  5.2-rc4 building 5.2-rc4
+	real    8m1.118s	481
+	real    8m1.681s	481
+	real    8m2.210s	482
+
+stable kernel creation (create 5.1.10-rc2)
+	real    0m51.200s
+	real    0m53.317s
+	real    0m47.756s
+	real    0m44.044s
+	real    0m45.120s
+	real    0m47.474s
+
+Round 3:
+/sys/devices/system/cpu/vulnerabilities $ grep . *
+l1tf:Not affected
+mds:Mitigation: Clear CPU buffers; SMT disabled
+meltdown:Not affected
+spec_store_bypass:Mitigation: Speculative Store Bypass disabled via prctl and seccomp
+spectre_v1:Mitigation: __user pointer sanitization
+spectre_v2:Mitigation: Full generic retpoline, IBPB: conditional, IBRS_FW, RSB filling
+
+
+Kernel build (make -j16)  5.2-rc4 building 5.2-rc4
+	real    9m16.245s	556
+	real    9m15.693s	555
+
+stable kernel creation (create 5.1.10-rc2)
+	real    0m45.280s
+	real    0m48.063s
+	real    0m50.969s
+
+
+
+
+
+stable kernel creation (create 5.1.10-rc2)
 
