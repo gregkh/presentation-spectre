@@ -34,9 +34,11 @@ spectre_v1:Mitigation: __user pointer sanitization
 spectre_v2:Mitigation: Full generic retpoline, IBPB: conditional, IBRS_FW, STIBP: conditional, RSB filling
 
 Kernel build (make -j16)  5.2-rc4 building 5.2-rc4
-	real    7m54.811s
-	real    7m55.256s
-	real    7m48.706s
+	real    7m54.811s	474
+	real    7m55.256s	475
+	real    7m48.706s	468
+				---
+			avg	472
 
 stable kernel creation (create 5.1.10-rc2)
       64.492071514 seconds time elapsed
