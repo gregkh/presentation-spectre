@@ -25,6 +25,25 @@ stable kernel creation (create 5.1.10-rc2)
 	real    0m50.946s
 
 
+Round 1:  MDS disabled (mds=off)
+l1tf:Not affected
+mds:Vulnerable; SMT vulnerable
+meltdown:Not affected
+spec_store_bypass:Mitigation: Speculative Store Bypass disabled via prctl and seccomp
+spectre_v1:Mitigation: __user pointer sanitization
+spectre_v2:Mitigation: Full generic retpoline, IBPB: conditional, IBRS_FW, STIBP: conditional, RSB filling
+
+Kernel build (make -j16)  5.2-rc4 building 5.2-rc4
+	real    7m54.811s
+	real    7m55.256s
+	real    7m48.706s
+
+stable kernel creation (create 5.1.10-rc2)
+      64.492071514 seconds time elapsed
+      70.574137578 seconds time elapsed
+      72.769920130 seconds time elapsed
+
+
 Round 2:
 /sys/devices/system/cpu/vulnerabilities $ grep . *
 l1tf:Not affected
@@ -90,7 +109,9 @@ Kernel build (make -j16)  5.2-rc4 building 5.2-rc4
 
 
 stable kernel creation (create 5.1.10-rc2)
-	real    0m45.714s
-	real    0m48.829s
-	real    0m52.015s
+      75.970330445 seconds time elapsed
+      66.843209527 seconds time elapsed
+      74.338777335 seconds time elapsed
+      70.935453697 seconds time elapsed
+      68.567487840 seconds time elapsed
 
