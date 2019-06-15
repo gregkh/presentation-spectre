@@ -69,6 +69,24 @@ stable kernel creation (create 5.1.10-rc2)
 
 
 
+Everything off!
+noibrs noibpb nospectre_v2 nospectre_v1 l1tf=off nospec_store_bypass_disable no_stf_barrier mds=off mitigations=off
+
+
+l1tf:Not affected
+mds:Vulnerable; SMT vulnerable
+meltdown:Not affected
+spec_store_bypass:Vulnerable
+spectre_v1:Mitigation: __user pointer sanitization
+spectre_v2:Vulnerable, IBPB: disabled, STIBP: disabled
+
+Kernel build (make -j16)  5.2-rc4 building 5.2-rc4
+	real    7m52.341s	472
+	real    7m53.068s	473
+
 
 stable kernel creation (create 5.1.10-rc2)
+	real    0m45.714s
+	real    0m48.829s
+	real    0m52.015s
 
