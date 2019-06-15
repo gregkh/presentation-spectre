@@ -8,10 +8,19 @@ spec_store_bypass:Mitigation: Speculative Store Bypass disabled via prctl and se
 spectre_v1:Mitigation: __user pointer sanitization
 spectre_v2:Mitigation: Full generic retpoline, IBPB: conditional, IBRS_FW, STIBP: conditional, RSB filling
 
-Kernel build (make -j16)
+Kernel build (make -j16)  5.2-rc4 building 5.2-rc4
+	real    7m51.870s	471
+	real    7m54.255s
+
+
 	real    8m1.171s	481
 	real    8m5.072s	485
 	real    8m4.460s	484
+
+stable kernel creation (create 5.1.10-rc2)
+	real    0m52.451s
+	real    0m53.438s
+	real    0m50.946s
 
 
 
