@@ -1,0 +1,23 @@
+MDS Additional resources:
+-------------------------
+
+
+links:
+	https://www.redhat.com/en/blog/understanding-mds-vulnerability-what-it-why-it-works-and-how-mitigate-it
+	mds reading list:	https://lwn.net/Articles/788522/
+	https://software.intel.com/security-software-guidance/insights/deep-dive-intel-analysis-microarchitectural-data-sampling
+	https://www.postgresql.org/message-id/flat/20190514223052.2iufhkjmgod2h7ic%40alap3.anarazel.de
+
+	https://cyberus-technology.de/posts/2019-05-14-zombieload.html
+	https://mdsattacks.com/
+	https://zombieloadattack.com/
+	https://cpu.fail/
+	https://www.redhat.com/en/blog/understanding-mds-vulnerability-what-it-why-it-works-and-how-mitigate-it
+	https://www.redhat.com/en/blog/deeper-look-mds-vulnerability
+	https://sites.google.com/a/chromium.org/dev/chromium-os/mds-on-chromeos
+	https://make-linux-fast-again.com/
+
+	SWAPGS:
+		https://access.redhat.com/articles/4329821
+		https://www.phoronix.com/scan.php?page=article&item=swapgs-spectre-impact&num=4  1-5% decrease
+

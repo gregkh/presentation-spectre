@@ -1,3 +1,5 @@
+Spectre additional resources:
+-----------------------------
 
 This talk is a very simple summary of some of the Spectre issues.  To
 get a real understanding of the problem, and the potential solutions,

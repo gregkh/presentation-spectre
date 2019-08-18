@@ -2,6 +2,10 @@ This is a repo containing a presentation about Linux and the recent
 spate of Spectre issues.  Originally given at LinuxCon Japan and China
 in June 2018.  Updated in August 2018 for OSS North America 2018.
 
+Also in here is a presentation for 2019 about MDS and other Spectre-like
+issues that have recently happened.  Presented in China in June 2019,
+Japan July 2019, and OSS North America in August 2019.
+
 Please see the file, additional_resources.txt for lots of good backup
 material to learn all about these issues.
 
